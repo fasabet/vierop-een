@@ -2,9 +2,11 @@
 <head>
     <script> 
             
-            function Insert(m)
+            function Insert(m){
+            document.getElementById("idbutton").innerHTML='X';
             
-            {   alert("kkkk")
+            alert("You Win")            
+            
                console.log (m);
            }
     </script>
@@ -52,13 +54,16 @@
                     array("","","","","","",""));
         
         
+        
         for ($x = 0; $x < 6; $x++) {
              echo "<br>";
             for ($y = 0; $y < 7; $y++) {
                 //$id= "$x.$y";      //    "1.2"
                $id= $x."".$y;      //    "12"
                 //echo "\n";
+             
                 echo '<button id=idbutton'.$id.' onclick="Insert(\''.$id.'\')">'.$toetsen[$x][$y].'</button>';
+                
             }
         }
         
